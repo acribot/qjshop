@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>轻井商城</title>
+	<meta name="keywords" content="填写描述语句，方便seo抓取">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/lib/sm.min.css">
+    <link rel="stylesheet" href="../css/lib/sm-extend.min.css">
+    <link rel="stylesheet" href="../css/lib/swiper-3.3.1.min.css" />
+	<link rel="stylesheet" href="../css/newPublic.css" />	
+	<link rel="stylesheet" href="../css/animate.min.css">
+</head>
+<body>
+	   <!-- Views -->
+		<div class="C_warp page M_payment" id=''>
+		 <header class="bar bar-nav nav" id="nav_head">
+				<a class="icon icon-left pull-left back"></a>
+				<div class="pull-right">
+				<span class="s1"><i class="C_icon C_icon12"></i></span>
+				<span class="s2"><i class="C_icon C_icon13"></i>	
+				<!--存在浮动溢出 所以分为2个控制  只支持个位数-->
+				<label class="circle circle_white" id="circle"></label>
+				<em class="num C_red" id="circle_num">0</em>
+				</span>
+				</div>
+			    <h1 class="C_tit"><i class="C_icon C_icon11 mid C_icon11_fix"></i></h1>
+		</header>
+		   <div class="content">
+                <div class="address" id="address">
+                	<a class="adress_con">添加收获地址</a>
+                	<i class="icon icon-right arrow"></i>
+                </div>
+                <div class="productList">
+                	<div class="pro1">
+                		<div class="C_lf info">
+                		<div class="oreder_img">
+               				<img src="../images/_temp/pic5.png" width="100%"/>
+               			</div>
+               			<span class="C_ellipsis"><em>轻井SR1</em> 电热毯（床用）电热毯（床用）电热毯（床用）</span>
+                		</div>
+                	    <div class="C_ri money">449元</div>
+                	</div>
+                	<div class="pro1">
+                		<div class="C_lf info">
+                		<div class="oreder_img">
+               				<img src="../images/_temp/pic5.png" width="100%"/>
+               			</div>
+               			<span class="C_ellipsis"><em>轻井SR1</em> 电热毯（床用）</span>
+                		</div>
+                	    <div class="C_ri money">449元</div>
+                	</div>
+                	<div class="pro1">
+                		<div class="C_lf info">
+                		<div class="oreder_img">
+               				<img src="../images/_temp/pic5.png" width="100%"/>
+               			</div>
+               			<span class="C_ellipsis"><em>轻井SR1</em> 电热毯（床用）</span>
+                		</div>
+                	    <div class="C_ri money"><span>228</span> x <span>3</span> = 533元</div>
+                	</div>
+                </div>
+                <div class="youhuiQuan C_clear"><span class="C_lf" id="tip1">50元现金券</span><span class="C_ri" id="tip2">50元</span></div>
+                <div class="youhui_con">
+                <i class="arrow"></i>
+                <ul class="youhui">
+                	<li><i class="quan10"></i><i class="choose_on hidden"></i></li>
+                	<li><i class="quan20"></i><i class="choose_on hidden"></i></li>
+                	<li><i class="quan30"></i><i class="choose_on hidden"></i></li>
+                	<li><i class="quan50"></i><i class="choose_on"></i></li>
+                </ul>
+                </div>
+		   </div>
+            
+		   <footer class="C_btn footer_btn2">
+	      <a href="" class="confirm C_font1">共4件  <em class="C_font2 C_mar_lf">合计：1373元</em></a><a href="" class="cancel">立即购买</a>
+	       </footer>
+	   </div>
+	    <!-- 你的html代码 -->
+        <script type='text/javascript' src="../js/lib/zepto.min.js" charset='utf-8'></script>
+        <script type='text/javascript' src='../js/lib/sm.min.js' charset='utf-8'></script>
+        <script type='text/javascript' src='../js/lib/sm-extend.min.js' charset='utf-8'></script>
+        <script type="text/javascript" src="../js/lib/swiper.min.js" ></script>   
+          <script>  
+        $(function () {
+       /*优惠券选择*/
+        $(".youhui li").click(function() {
+        $(".youhui li").children(".choose_on").addClass("hidden");
+        $(this).children(".choose_on").removeClass("hidden");
+         var n = $(this).index();
+        if(n==0){
+        	$('#tip1').text("10元现金券");
+            $('#tip2').text("10元");
+        }else if(n==1){
+            $('#tip1').text("20元现金券");
+            $('#tip2').text("20元");
+        }else if(n==2){
+        	$('#tip1').text("30元现金券");
+            $('#tip2').text("30元");
+        }else if(n==3){
+        	$('#tip1').text("50元现金券");
+            $('#tip2').text("50元");
+        }
+        });
+         $("#address").click(function() {$.router.loadPage('creatAdr.html');});
+        });
+        </script>
+</body>
+</html>
